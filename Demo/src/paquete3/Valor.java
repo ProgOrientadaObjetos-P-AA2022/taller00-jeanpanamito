@@ -5,6 +5,8 @@
  */
 package paquete3;
 
+import paquete5.Dato;
+
 /**
  *
  * @author reroes
