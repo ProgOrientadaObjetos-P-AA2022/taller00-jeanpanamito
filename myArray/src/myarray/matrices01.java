@@ -184,7 +184,6 @@ public class matrices01 {
         
         return 
      */
-
     public void asignarNotas(int[][] alumnos) {
         int l = 0;
         System.out.println("Matriz " + (l + 1));
@@ -198,7 +197,7 @@ public class matrices01 {
         }
     }
 
-    public void mediaAlumno(int[][] alumnos) {
+    /* public void mediaAlumno(int[][] alumnos) {
         int[][] est;
         int[][] mat;
         
@@ -210,12 +209,9 @@ public class matrices01 {
             for (int j = 0; j < alumnos[0].length; j++) {
             }
             }
-    }
-
-   
-
+      */
     public void presentaAlumnos(int[][] alumnos) {
-   for (int i = 0; i < alumnos.length; i++) {
+        for (int i = 0; i < alumnos.length; i++) {
             for (int j = 0; j < alumnos[0].length; j++) {
                 System.out.print(alumnos[i][j] + " ");
 
@@ -223,5 +219,36 @@ public class matrices01 {
             System.out.println(" ");
 
         }
+    }
+
+    public void signo() {
+        int dia;
+        int mes;
+        System.out.println("Qué día naciste");
+        dia = entrada.nextInt();
+
+        System.out.println("Qué mes naciste");
+        mes = entrada.nextInt();
+        switch (mes) {
+            case 1:
+                // Enero
+                if (dia >= 21) {
+                    System.out.println("Acuario");
+                } else {
+                    System.out.println("Capricornio");
+                }
+                break;
+            case 2:
+                // Febrero
+                if (dia >= 20) {
+                    System.out.println("Piscis");
+                } else {
+                    System.out.println("Acuario");
+                }
+                break;
+            default:
+                break;
+        }
+
     }
 }

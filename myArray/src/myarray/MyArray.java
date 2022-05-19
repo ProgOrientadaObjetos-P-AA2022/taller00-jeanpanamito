@@ -71,7 +71,9 @@ public class MyArray {
                     obj.presentaAlumnos(alumnos);
                     
                     break;
-                
+                case 9:
+                    obj.signo();
+                break;
                     
                 default: break;
 
