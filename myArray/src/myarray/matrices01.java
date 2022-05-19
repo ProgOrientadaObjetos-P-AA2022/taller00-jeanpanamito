@@ -12,10 +12,10 @@ import java.util.Scanner;
  * @author JEanpa
  */
 public class matrices01 {
-Scanner entrada;
+
+    Scanner entrada;
     int[][] myMatriz;
 
-   
     public matrices01(int fil, int col) {
         this.entrada = new Scanner(System.in);
         this.myMatriz = new int[fil][col];
@@ -30,6 +30,8 @@ Scanner entrada;
         System.out.println("Transponer matriz Secundario:   [4]");
         System.out.println("Multiplicacion de matrices      [5]:");
         System.out.println("Determinante                    [6]:");
+        System.out.println("Suma de Pares e Impares         [7]:");
+        System.out.println("Calcular la media de una clase  [8]:");
         System.out.println("Salir                           [0]:");
 
         op = entrada.nextInt();
@@ -47,16 +49,34 @@ Scanner entrada;
         }
     }
 
+    public void sumaPareseImpares() {
+        int sp = 0;
+        int si = 0;
+        for (int i = 0; i < myMatriz.length; i++) {
+            for (int j = 0; j < myMatriz[0].length; i++) {
+                if (myMatriz[i][j] % 2 == 0) {
+                    sp += myMatriz[i][j];
+                    System.out.println("valores Pares");
+                    System.out.println(myMatriz[i][j] + " ");
+                } else {
+                    si += myMatriz[i][j];
+                }
+                System.out.println("valores Impares");
+                System.out.print(myMatriz[i][j] + " ");
+
+            }
+        }
+    }
+
     public void leerMatriz(int[][] x) {
         int l = 0;
-        System.out.println("Matriz "+(l+1));
+        System.out.println("Matriz " + (l + 1));
         for (int i = 0; i < x.length; i++) {
             for (int j = 0; j < x[0].length; j++) {
                 System.out.println("Ingrese elemento [" + i + "][" + j + "]:");
                 x[i][j] = entrada.nextInt();
 
             }
-            
 
         }
     }
@@ -129,7 +149,7 @@ Scanner entrada;
 
     }
 
-   public int determinante(int[][] X) {
+    public int determinante(int[][] X) {
         int Sp = 0, Sn = 0, Ap, An, j, l;
         for (var k = 0; k < X.length; k++) {
             j = X.length - 1 - k;
@@ -155,6 +175,53 @@ Scanner entrada;
         }
         return Sp - Sn;
     }
-}
 
-    
+    /*public int inicializarMatriz(int[][]x, int n ,int m) {
+        int[][] A = new int[n][m];
+        int[] filas = new int[n];
+        int[] columas = new int[m];
+        
+        
+        return 
+     */
+
+    public void asignarNotas(int[][] alumnos) {
+        int l = 0;
+        System.out.println("Matriz " + (l + 1));
+        for (int i = 0; i < alumnos.length; i++) {
+            for (int j = 0; j < alumnos[0].length; j++) {
+                System.out.println("Ingrese elemento [" + i + "][" + j + "]:");
+                alumnos[i][j] = entrada.nextInt();
+
+            }
+
+        }
+    }
+
+    public void mediaAlumno(int[][] alumnos) {
+        int[][] est;
+        int[][] mat;
+        
+        double c = 0;
+         double pt = 0;
+         double pAus =0;
+  
+         for (int i = 0; i < alumnos.length; i++) {
+            for (int j = 0; j < alumnos[0].length; j++) {
+            }
+            }
+    }
+
+   
+
+    public void presentaAlumnos(int[][] alumnos) {
+   for (int i = 0; i < alumnos.length; i++) {
+            for (int j = 0; j < alumnos[0].length; j++) {
+                System.out.print(alumnos[i][j] + " ");
+
+            }
+            System.out.println(" ");
+
+        }
+    }
+}

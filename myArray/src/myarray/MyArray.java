@@ -26,6 +26,8 @@ public class MyArray {
         int[][] A = new int[3][4];
         int[][] B = new int[4][2];
         int [][]C= new int [3][2];
+        int [][] alumnos = new int [5][10];
+        
         do {
             op = obj.menu();
             switch (op) {
@@ -55,8 +57,19 @@ public class MyArray {
                     System.out.println("--------------------");
                      System.out.println(obj.determinante(A));
                     System.out.println("____________________");
+                    break;
+                case 7:
+                    obj.sumaPareseImpares();
+                    
                    
+                    break;
+                case 8:
+                     obj.asignarNotas(alumnos);
+                   // obj.mediaAlumno(alumnos);
+                    //obj.mediaClase(alumnos);
                    
+                    obj.presentaAlumnos(alumnos);
+                    
                     break;
                 
                     
