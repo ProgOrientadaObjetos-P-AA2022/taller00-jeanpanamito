@@ -47,7 +47,9 @@ public class Archivos {
 
             System.out.println("Ingrear Correo");
             correo = entrada.nextLine();
-            escribir = new FileWriter(archivo, true);
+            escribir = new FileWriter(archivo, true); // si pones false elimina lo que hayas escrito y guarda de nuevo
+                                                        //mientras que con el true sigue escribiendo en el txt 
+           
             linea = new PrintWriter(escribir);
             linea.println(id + "\n" + nombre + "\n" + correo);
             linea.close();
