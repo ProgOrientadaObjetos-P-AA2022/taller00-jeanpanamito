@@ -38,21 +38,45 @@ public class Archivos {
 
         }
         try {
-            
+
             System.out.println("Ingresar ID: ");
-            id=entrada.nextInt();
-             entrada.nextLine();
+            id = entrada.nextInt();
+            entrada.nextLine();
             System.out.println("Ingresar Nombre: ");
             nombre = entrada.nextLine();
-           
+
             System.out.println("Ingrear Correo");
             correo = entrada.nextLine();
-            escribir = new FileWriter(archivo,false);
+            escribir = new FileWriter(archivo, true);
             linea = new PrintWriter(escribir);
-            linea.println(id+"\n"+nombre+"\n"+correo);
+            linea.println(id + "\n" + nombre + "\n" + correo);
             linea.close();
         } catch (Exception e) {
         }
+    }
+
+    public void presentar() {
+        FileReader leer; 
+        String _nombre = "", _id = "", _correo = "", cadena = "";
+        BufferedReader almacenamiento;
+        try {
+            leer = new FileReader(archivo);
+            almacenamiento = new BufferedReader(leer);
+            while (cadena != null) {
+                cadena = almacenamiento.readLine();
+                _id = cadena;
+                cadena = almacenamiento.readLine();
+                _nombre = cadena;
+                cadena = almacenamiento.readLine();
+                _correo = cadena;
+                if(cadena!=null)
+                    System.out.println(_id+"\t"+_nombre+"\t"+_correo);
+            }
+            almacenamiento.close();
+            leer.close();
+        } catch (Exception e) {
+        }
+
     }
 
     public static void main(String[] args) {
@@ -65,8 +89,8 @@ public class Archivos {
                 case 1:
                     obj.escribir();
                     break;
-         //       case 2:
-           //         obj.presentar();
+                case 2:
+                    obj.presentar();
 
             }
 
