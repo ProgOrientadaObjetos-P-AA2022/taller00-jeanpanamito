@@ -3,27 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package paquete2;
-
-import paquete1.Mensaje;
-import paquete3.Valor;
-
+package arrayfile;
 
 /**
  *
- * @author reroes
+ * @author PERSONAL
  */
-public class Demo {
+public class ArrayFIle {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        // TODO code application logic here
         
-        System.out.printf("%s,%s\n", Mensaje.obtenerFrase(),Valor.obtenerHabitantes());
-	
-
-
+        metFiles objFiles = new metFiles();
+        objFiles.llenarM();
+        
+        
     }
     
 }
